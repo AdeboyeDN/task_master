@@ -1,0 +1,59 @@
+header{
+   position: relative;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   height: 80px;
+   padding: 20px;
+   text-align: center;
+   background-color: aqua;
+   color: aliceblue;
+}
+body{
+  background-color: beige;
+}
+main .form{
+  position: absolute;
+  top: 90px;
+  right: 300px;
+  font-size:medium;
+
+}
+#meet{
+  height: 28px;
+  background-color:lawngreen;
+}
+
+#met{
+  height: 25px;
+  
+}
+#update{
+  background-color: lightgreen;
+}
+#delete{
+  background-color:red ;
+}
+.table{
+  background-color: aquamarine;
+  padding: 20px;
+  width: 80%;
+  height: 60%;
+  position: relative;
+  top:20px;
+  left: 80px;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+  border-spacing: 10px;
+}
+
+th, td{
+  border: 1px solid black;
+  padding: 10px;
+}
+th{
+  height: 40px;
+}

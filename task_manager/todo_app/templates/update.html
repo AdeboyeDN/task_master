@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Update-Page
+    </title>
+  </head>
+  <body>
+    <header>
+      <h1>Update Task</h1>
+    </header>
+    <main>
+      <form method="POST">
+        {% csrf_token %}
+        {{form}}<span><button type="submit" id="meet" >update</button></span>
+      </form>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>
+      TODO-LIST
+    </title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Todo-List App
+      </h1>
+    </header>
+    <main>  
+      <form method="POST">
+        {% csrf_token %}
+        <div  class="form">
+          {{form.name}}<span>
+             <button type="submit" id="meet">Add</button></span>
+        </div >
+      </form>    
+      <div class="table">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Action</th>
+          </tr>
+          {% for task in task %}
+          <tr>
+            {% if task.done == False %}
+              <td>{{task.name}}</td>
+            {% else%}
+              <td><s>{{task.name}}</s></td>
+            {%endif%}
+              <td>
+              <a href="{% url 'update' task.id %}"><button type="submit" id="update">Update</button></a><span><a href="{% url 'delete' task.id %}"><button type="submit" id="delete">Delete</button></a></span>
+              </td>
+          </tr>
+          {% endfor%}
+        </table>    
+
+      </div>
+    </main>
+  </body>
+</html>
